@@ -21,6 +21,9 @@ int main(int n, char **arg) {
 
   int s = socket(res->ai_family, res->ai_socktype, res->ai_protocol);
 
+  const int optval = 1;
+  setsockopt(s, SOL_SOCKET, SO_REUSEADDR, &optval, sizeof optval);
+
   errorcode = bind(s, res->ai_addr, res->ai_addrlen);
   if (errorcode == -1) {
     fprintf(stderr, "Error binding to socket");
@@ -33,6 +36,9 @@ int main(int n, char **arg) {
   if (errorcode == -1) {
     fprintf(stderr, "Error listening to socket");
     exit(EXIT_FAILURE);
+  }
+
+  while (1) {
   }
 
   return 0;
