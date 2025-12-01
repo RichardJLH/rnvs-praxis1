@@ -8,7 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/c/Users/David/OneDrive/Desktop/Uni/RNVS/rnvs-praxis1/webserver.c" "CMakeFiles/webserver.dir/webserver.c.o" "gcc" "CMakeFiles/webserver.dir/webserver.c.o.d"
+  "/home/richard/Documents/Uni/RN/rnvs-praxis1/webserver.c" "CMakeFiles/webserver.dir/webserver.c.o" "gcc" "CMakeFiles/webserver.dir/webserver.c.o.d"
+  "" "webserver" "gcc" "CMakeFiles/webserver.dir/link.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

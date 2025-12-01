@@ -1,5 +1,5 @@
-/mnt/c/Users/David/OneDrive/Desktop/Uni/RNVS/rnvs-praxis1/build/CMakeFiles/webserver.dir
-/mnt/c/Users/David/OneDrive/Desktop/Uni/RNVS/rnvs-praxis1/build/CMakeFiles/package.dir
-/mnt/c/Users/David/OneDrive/Desktop/Uni/RNVS/rnvs-praxis1/build/CMakeFiles/package_source.dir
-/mnt/c/Users/David/OneDrive/Desktop/Uni/RNVS/rnvs-praxis1/build/CMakeFiles/edit_cache.dir
-/mnt/c/Users/David/OneDrive/Desktop/Uni/RNVS/rnvs-praxis1/build/CMakeFiles/rebuild_cache.dir
+/home/richard/Documents/Uni/RN/rnvs-praxis1/build/CMakeFiles/webserver.dir
+/home/richard/Documents/Uni/RN/rnvs-praxis1/build/CMakeFiles/package.dir
+/home/richard/Documents/Uni/RN/rnvs-praxis1/build/CMakeFiles/package_source.dir
+/home/richard/Documents/Uni/RN/rnvs-praxis1/build/CMakeFiles/edit_cache.dir
+/home/richard/Documents/Uni/RN/rnvs-praxis1/build/CMakeFiles/rebuild_cache.dir

@@ -1,1 +1,1 @@
-/usr/bin/cc -g CMakeFiles/webserver.dir/webserver.c.o -o webserver  -lm 
+/nix/store/67x7pknz0qa2j16x02idf0x98lpcspah-gcc-wrapper-14.3.0/bin/gcc -g -Wl,--dependency-file=CMakeFiles/webserver.dir/link.d CMakeFiles/webserver.dir/webserver.c.o -o webserver  -lm
