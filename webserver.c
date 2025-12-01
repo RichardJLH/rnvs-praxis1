@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <sys/socket.h>
 #include <sys/types.h>
+#include <string.h>
 
 int main(int n, char **arg) {
   if (n != 3)
@@ -38,8 +39,21 @@ int main(int n, char **arg) {
     exit(EXIT_FAILURE);
   }
 
-  while (1) {
-  }
+ // while (1) {
+  //}
+
+struct sockaddr_storage their_addr;
+socklen_t addr_size;
+
+char recieved[512];
+const char* sent = "Reply";
+
+//while (1){
+int s1 = accept(s, (struct sockaddr *)&their_addr, &addr_size);
+recv(s1, recieved, 512, 0);
+send(s1, sent, strlen("Reply"), 0); 
+//}
+
 
   return 0;
 }
