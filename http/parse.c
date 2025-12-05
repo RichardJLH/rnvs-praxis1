@@ -144,7 +144,7 @@ bool parse_packet(const string_view raw, packet *const result) {
   }
 
   const string_view body_raw = (string_view){
-      .begin = headers_raw.end + 4,
+      .begin = headers_raw.end + 2,
       .end = raw.end,
   };
 

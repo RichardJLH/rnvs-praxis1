@@ -20,6 +20,9 @@ typedef struct {
 
 Resources initial_static();
 
-const char *query_resource(const char *, const Resources *);
+const char *query_resource_data(const Resources *, const char *);
+bool write_resource(Resources *const, const char *, const char *);
+bool delete_resource(Resources *const, const char *);
+bool is_modifiable(const char *const);
 
 #endif

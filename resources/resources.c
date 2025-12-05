@@ -29,13 +29,53 @@ Resources initial_static() {
   return resources;
 }
 
-const char *query_resource(const char *const uri,
-                           const Resources *const resources) {
+const Resource *query_resource(const Resources *const resources,
+                               const char *const uri) {
   for (size_t i = 0; i < resources->count; ++i) {
     const Resource *const resource = resources->resources + i;
     if (strcmp(resource->uri, uri) == 0) {
-      return resource->data;
+      return resource;
     }
   }
   return NULL;
+}
+const char *query_resource_data(const Resources *const resources,
+                                const char *const uri) {
+  const Resource *const resource = query_resource(resources, uri);
+  return resource == NULL ? NULL : resource->data;
+}
+void append_resource(Resources *const resources, const char *const uri,
+                     const char *const data) {
+  Resource *const new = resources->resources + resources->count;
+  strcpy(new->uri, uri);
+  strcpy(new->data, data);
+  ++resources->count;
+}
+bool write_resource(Resources *const resources, const char *const uri,
+                    const char *const data) {
+  char *const resource = (char *)query_resource_data(resources, uri);
+  if (resource == NULL) {
+    append_resource(resources, uri, data);
+    return true;
+  } else {
+    strcpy(resource, data);
+    return false;
+  }
+}
+bool delete_resource(Resources *const resources, const char *const uri) {
+  Resource *const resource = (Resource *)query_resource(resources, uri);
+  if (resource == NULL) {
+    return false;
+  }
+
+  const size_t index = resource - resources->resources;
+  memmove(resource, resource + 1,
+          (resources->count - index) * sizeof(Resource));
+  --resources->count;
+  return true;
+}
+
+bool is_modifiable(const char *const uri) {
+  static const char *const PREFIX = "/dynamic/";
+  return strncmp(uri, PREFIX, strlen(PREFIX)) == 0;
 }

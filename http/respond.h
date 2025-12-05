@@ -14,7 +14,7 @@ typedef struct {
   char body[MAX_RESPONSE_SIZE];
 } Response;
 
-void generate_response(Response *, bool, packet, const Resources *);
+void generate_response(Response *, Resources *, bool, packet);
 void format_response(char *, const Response *);
 
 #endif

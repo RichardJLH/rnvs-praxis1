@@ -32,7 +32,7 @@ void handle_client(const int client_socket, Resources *const resources) {
       const bool packet_valid = parse_packet(packet_raw, &http_packet);
 
       Response response;
-      generate_response(&response, packet_valid, http_packet, resources);
+      generate_response(&response, resources, packet_valid, http_packet);
       char response_message[MAX_RESPONSE_SIZE];
       format_response(response_message, &response);
       send_message(client_socket, response_message);
