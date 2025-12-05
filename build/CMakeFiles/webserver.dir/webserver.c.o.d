@@ -43,7 +43,10 @@ CMakeFiles/webserver.dir/webserver.c.o: \
  /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/bits/struct_rwlock.h \
  /nix/store/qnwxpk0in4bm43q2qnykvkjxa9qhqd0z-gcc-14.3.0/lib/gcc/x86_64-unknown-linux-gnu/14.3.0/include/stdbool.h \
  /home/richard/Documents/Uni/RN/rnvs-praxis1/http/respond.h \
+ /home/richard/Documents/Uni/RN/rnvs-praxis1/http/../resources/resources.h \
+ /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/linux/limits.h \
  /home/richard/Documents/Uni/RN/rnvs-praxis1/network/network.h \
+ /home/richard/Documents/Uni/RN/rnvs-praxis1/resources/resources.h \
  /home/richard/Documents/Uni/RN/rnvs-praxis1/util/failure.h \
  /home/richard/Documents/Uni/RN/rnvs-praxis1/util/string_view.h \
  /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/netdb.h \

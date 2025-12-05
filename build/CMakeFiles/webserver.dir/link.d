@@ -8,6 +8,7 @@ webserver: \
   /nix/store/lmn7lwydprqibdkghw7wgcn21yhllz13-glibc-2.40-66/lib/libm.so \
   /nix/store/lmn7lwydprqibdkghw7wgcn21yhllz13-glibc-2.40-66/lib/libm.so.6 \
   /nix/store/lmn7lwydprqibdkghw7wgcn21yhllz13-glibc-2.40-66/lib/libmvec.so.1 \
+  resources/libresources.a \
   network/libnetwork.a \
   http/libhttp.a \
   util/libutil.a \
@@ -50,6 +51,8 @@ CMakeFiles/webserver.dir/webserver.c.o:
 /nix/store/lmn7lwydprqibdkghw7wgcn21yhllz13-glibc-2.40-66/lib/libm.so.6:
 
 /nix/store/lmn7lwydprqibdkghw7wgcn21yhllz13-glibc-2.40-66/lib/libmvec.so.1:
+
+resources/libresources.a:
 
 network/libnetwork.a:
 

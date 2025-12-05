@@ -1,6 +1,7 @@
 #include "http/parse.h"
 #include "http/respond.h"
 #include "network/network.h"
+#include "resources/resources.h"
 #include "util/failure.h"
 #include "util/string_view.h"
 #include <netdb.h>
@@ -11,7 +12,7 @@
 #include <sys/socket.h>
 #include <unistd.h>
 
-void handle_client(const int client_socket) {
+void handle_client(const int client_socket, Resources *const resources) {
   char buffer[MAX_PACKET_SIZE];
   char *data_end = buffer;
   const char *const buffer_end = buffer + sizeof buffer;
@@ -29,8 +30,12 @@ void handle_client(const int client_socket) {
           (string_view){.begin = buffer, .end = buffer + packet_length};
       packet http_packet;
       const bool packet_valid = parse_packet(packet_raw, &http_packet);
-      const char *const response = generate_response(packet_valid, http_packet);
-      send_message(client_socket, response);
+
+      Response response;
+      generate_response(&response, packet_valid, http_packet, resources);
+      char response_message[MAX_RESPONSE_SIZE];
+      format_response(response_message, &response);
+      send_message(client_socket, response_message);
 
       memmove(buffer, buffer + packet_length,
               (data_end - buffer) - packet_length);
@@ -58,9 +63,11 @@ int main(int argc, char **argv) {
 
   listen_socket(listener_socket);
 
+  Resources resources = initial_static();
+
   while (true) {
     const int client_socket = accept_client(listener_socket);
-    handle_client(client_socket);
+    handle_client(client_socket, &resources);
     close(client_socket);
   }
 

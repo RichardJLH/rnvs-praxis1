@@ -96,6 +96,7 @@ webserver_EXTERNAL_OBJECTS =
 webserver: CMakeFiles/webserver.dir/webserver.c.o
 webserver: CMakeFiles/webserver.dir/build.make
 webserver: CMakeFiles/webserver.dir/compiler_depend.ts
+webserver: resources/libresources.a
 webserver: network/libnetwork.a
 webserver: http/libhttp.a
 webserver: util/libutil.a

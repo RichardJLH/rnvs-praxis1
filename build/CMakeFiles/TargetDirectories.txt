@@ -3,6 +3,11 @@
 /home/richard/Documents/Uni/RN/rnvs-praxis1/build/CMakeFiles/package_source.dir
 /home/richard/Documents/Uni/RN/rnvs-praxis1/build/CMakeFiles/edit_cache.dir
 /home/richard/Documents/Uni/RN/rnvs-praxis1/build/CMakeFiles/rebuild_cache.dir
+/home/richard/Documents/Uni/RN/rnvs-praxis1/build/resources/CMakeFiles/resources.dir
+/home/richard/Documents/Uni/RN/rnvs-praxis1/build/resources/CMakeFiles/package.dir
+/home/richard/Documents/Uni/RN/rnvs-praxis1/build/resources/CMakeFiles/package_source.dir
+/home/richard/Documents/Uni/RN/rnvs-praxis1/build/resources/CMakeFiles/edit_cache.dir
+/home/richard/Documents/Uni/RN/rnvs-praxis1/build/resources/CMakeFiles/rebuild_cache.dir
 /home/richard/Documents/Uni/RN/rnvs-praxis1/build/network/CMakeFiles/network.dir
 /home/richard/Documents/Uni/RN/rnvs-praxis1/build/network/CMakeFiles/package.dir
 /home/richard/Documents/Uni/RN/rnvs-praxis1/build/network/CMakeFiles/package_source.dir

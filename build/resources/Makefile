@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/richard/Documents/Uni/RN/rnvs-praxis1/build
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool..."
-	/nix/store/a3w3ka2d796ghlhf31il839c0658m5ih-cmake-3.31.7/bin/cpack --config ./CPackConfig.cmake
+	cd /home/richard/Documents/Uni/RN/rnvs-praxis1/build && /nix/store/a3w3ka2d796ghlhf31il839c0658m5ih-cmake-3.31.7/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool for source..."
-	/nix/store/a3w3ka2d796ghlhf31il839c0658m5ih-cmake-3.31.7/bin/cpack --config ./CPackSourceConfig.cmake /home/richard/Documents/Uni/RN/rnvs-praxis1/build/CPackSourceConfig.cmake
+	cd /home/richard/Documents/Uni/RN/rnvs-praxis1/build && /nix/store/a3w3ka2d796ghlhf31il839c0658m5ih-cmake-3.31.7/bin/cpack --config ./CPackSourceConfig.cmake /home/richard/Documents/Uni/RN/rnvs-praxis1/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -107,14 +107,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/richard/Documents/Uni/RN/rnvs-praxis1/build/CMakeFiles /home/richard/Documents/Uni/RN/rnvs-praxis1/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /home/richard/Documents/Uni/RN/rnvs-praxis1/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/richard/Documents/Uni/RN/rnvs-praxis1/build/CMakeFiles /home/richard/Documents/Uni/RN/rnvs-praxis1/build/resources//CMakeFiles/progress.marks
+	cd /home/richard/Documents/Uni/RN/rnvs-praxis1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 resources/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/richard/Documents/Uni/RN/rnvs-praxis1/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /home/richard/Documents/Uni/RN/rnvs-praxis1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 resources/clean
 .PHONY : clean
 
 # The main clean target
@@ -123,107 +123,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/richard/Documents/Uni/RN/rnvs-praxis1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 resources/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/richard/Documents/Uni/RN/rnvs-praxis1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 resources/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/richard/Documents/Uni/RN/rnvs-praxis1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named webserver
+# Convenience name for target.
+resources/CMakeFiles/resources.dir/rule:
+	cd /home/richard/Documents/Uni/RN/rnvs-praxis1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 resources/CMakeFiles/resources.dir/rule
+.PHONY : resources/CMakeFiles/resources.dir/rule
 
-# Build rule for target.
-webserver: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 webserver
-.PHONY : webserver
-
-# fast build rule for target.
-webserver/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/webserver.dir/build.make CMakeFiles/webserver.dir/build
-.PHONY : webserver/fast
-
-#=============================================================================
-# Target rules for targets named resources
-
-# Build rule for target.
-resources: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 resources
+# Convenience name for target.
+resources: resources/CMakeFiles/resources.dir/rule
 .PHONY : resources
 
 # fast build rule for target.
 resources/fast:
-	$(MAKE) $(MAKESILENT) -f resources/CMakeFiles/resources.dir/build.make resources/CMakeFiles/resources.dir/build
+	cd /home/richard/Documents/Uni/RN/rnvs-praxis1/build && $(MAKE) $(MAKESILENT) -f resources/CMakeFiles/resources.dir/build.make resources/CMakeFiles/resources.dir/build
 .PHONY : resources/fast
 
-#=============================================================================
-# Target rules for targets named network
-
-# Build rule for target.
-network: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 network
-.PHONY : network
-
-# fast build rule for target.
-network/fast:
-	$(MAKE) $(MAKESILENT) -f network/CMakeFiles/network.dir/build.make network/CMakeFiles/network.dir/build
-.PHONY : network/fast
-
-#=============================================================================
-# Target rules for targets named http
-
-# Build rule for target.
-http: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 http
-.PHONY : http
-
-# fast build rule for target.
-http/fast:
-	$(MAKE) $(MAKESILENT) -f http/CMakeFiles/http.dir/build.make http/CMakeFiles/http.dir/build
-.PHONY : http/fast
-
-#=============================================================================
-# Target rules for targets named util
-
-# Build rule for target.
-util: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 util
-.PHONY : util
-
-# fast build rule for target.
-util/fast:
-	$(MAKE) $(MAKESILENT) -f util/CMakeFiles/util.dir/build.make util/CMakeFiles/util.dir/build
-.PHONY : util/fast
-
-webserver.o: webserver.c.o
-.PHONY : webserver.o
+resources.o: resources.c.o
+.PHONY : resources.o
 
 # target to build an object file
-webserver.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/webserver.dir/build.make CMakeFiles/webserver.dir/webserver.c.o
-.PHONY : webserver.c.o
+resources.c.o:
+	cd /home/richard/Documents/Uni/RN/rnvs-praxis1/build && $(MAKE) $(MAKESILENT) -f resources/CMakeFiles/resources.dir/build.make resources/CMakeFiles/resources.dir/resources.c.o
+.PHONY : resources.c.o
 
-webserver.i: webserver.c.i
-.PHONY : webserver.i
+resources.i: resources.c.i
+.PHONY : resources.i
 
 # target to preprocess a source file
-webserver.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/webserver.dir/build.make CMakeFiles/webserver.dir/webserver.c.i
-.PHONY : webserver.c.i
+resources.c.i:
+	cd /home/richard/Documents/Uni/RN/rnvs-praxis1/build && $(MAKE) $(MAKESILENT) -f resources/CMakeFiles/resources.dir/build.make resources/CMakeFiles/resources.dir/resources.c.i
+.PHONY : resources.c.i
 
-webserver.s: webserver.c.s
-.PHONY : webserver.s
+resources.s: resources.c.s
+.PHONY : resources.s
 
 # target to generate assembly for a file
-webserver.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/webserver.dir/build.make CMakeFiles/webserver.dir/webserver.c.s
-.PHONY : webserver.c.s
+resources.c.s:
+	cd /home/richard/Documents/Uni/RN/rnvs-praxis1/build && $(MAKE) $(MAKESILENT) -f resources/CMakeFiles/resources.dir/build.make resources/CMakeFiles/resources.dir/resources.c.s
+.PHONY : resources.c.s
 
 # Help Target
 help:
@@ -235,14 +184,10 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
-	@echo "... http"
-	@echo "... network"
 	@echo "... resources"
-	@echo "... util"
-	@echo "... webserver"
-	@echo "... webserver.o"
-	@echo "... webserver.i"
-	@echo "... webserver.s"
+	@echo "... resources.o"
+	@echo "... resources.i"
+	@echo "... resources.s"
 .PHONY : help
 
 
@@ -254,6 +199,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/richard/Documents/Uni/RN/rnvs-praxis1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

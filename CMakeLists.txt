@@ -4,8 +4,9 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(webserver webserver.c)
 target_compile_options(webserver PRIVATE -Wall -Wextra -Wpedantic)
-target_link_libraries(webserver PRIVATE -lm network http util)
+target_link_libraries(webserver PRIVATE -lm resources network http util)
 
+add_subdirectory(resources)
 add_subdirectory(network)
 add_subdirectory(http)
 add_subdirectory(util)
