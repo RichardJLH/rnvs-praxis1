@@ -96,6 +96,9 @@ webserver_EXTERNAL_OBJECTS =
 webserver: CMakeFiles/webserver.dir/webserver.c.o
 webserver: CMakeFiles/webserver.dir/build.make
 webserver: CMakeFiles/webserver.dir/compiler_depend.ts
+webserver: network/libnetwork.a
+webserver: http/libhttp.a
+webserver: util/libutil.a
 webserver: CMakeFiles/webserver.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/richard/Documents/Uni/RN/rnvs-praxis1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable webserver"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/webserver.dir/link.txt --verbose=$(VERBOSE)

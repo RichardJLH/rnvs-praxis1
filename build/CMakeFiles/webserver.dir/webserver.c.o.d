@@ -1,7 +1,10 @@
 CMakeFiles/webserver.dir/webserver.c.o: \
  /home/richard/Documents/Uni/RN/rnvs-praxis1/webserver.c \
  /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/stdc-predef.h \
- /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/netdb.h \
+ /home/richard/Documents/Uni/RN/rnvs-praxis1/http/parse.h \
+ /home/richard/Documents/Uni/RN/rnvs-praxis1/http/../util/string_view.h \
+ /home/richard/Documents/Uni/RN/rnvs-praxis1/http/packet.h \
+ /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/sys/types.h \
  /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/features.h \
  /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/features-time64.h \
  /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/bits/wordsize.h \
@@ -10,20 +13,14 @@ CMakeFiles/webserver.dir/webserver.c.o: \
  /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/bits/long-double.h \
  /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/gnu/stubs.h \
  /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/gnu/stubs-64.h \
- /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/netinet/in.h \
- /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/bits/stdint-uintn.h \
  /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/bits/types.h \
  /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/bits/typesizes.h \
  /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/bits/time64.h \
- /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/sys/socket.h \
- /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/bits/types/struct_iovec.h \
- /nix/store/qnwxpk0in4bm43q2qnykvkjxa9qhqd0z-gcc-14.3.0/lib/gcc/x86_64-unknown-linux-gnu/14.3.0/include/stddef.h \
- /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/bits/socket.h \
- /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/sys/types.h \
  /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/bits/types/clock_t.h \
  /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/bits/types/clockid_t.h \
  /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/bits/types/time_t.h \
  /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/bits/types/timer_t.h \
+ /nix/store/qnwxpk0in4bm43q2qnykvkjxa9qhqd0z-gcc-14.3.0/lib/gcc/x86_64-unknown-linux-gnu/14.3.0/include/stddef.h \
  /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/bits/stdint-intn.h \
  /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/endian.h \
  /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/bits/endian.h \
@@ -44,6 +41,17 @@ CMakeFiles/webserver.dir/webserver.c.o: \
  /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/bits/atomic_wide_counter.h \
  /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/bits/struct_mutex.h \
  /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/bits/struct_rwlock.h \
+ /nix/store/qnwxpk0in4bm43q2qnykvkjxa9qhqd0z-gcc-14.3.0/lib/gcc/x86_64-unknown-linux-gnu/14.3.0/include/stdbool.h \
+ /home/richard/Documents/Uni/RN/rnvs-praxis1/http/respond.h \
+ /home/richard/Documents/Uni/RN/rnvs-praxis1/network/network.h \
+ /home/richard/Documents/Uni/RN/rnvs-praxis1/util/failure.h \
+ /home/richard/Documents/Uni/RN/rnvs-praxis1/util/string_view.h \
+ /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/netdb.h \
+ /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/netinet/in.h \
+ /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/bits/stdint-uintn.h \
+ /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/sys/socket.h \
+ /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/bits/types/struct_iovec.h \
+ /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/bits/socket.h \
  /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/bits/socket_type.h \
  /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/bits/sockaddr.h \
  /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/asm/socket.h \
@@ -62,7 +70,6 @@ CMakeFiles/webserver.dir/webserver.c.o: \
  /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/bits/in.h \
  /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/rpc/netdb.h \
  /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/bits/netdb.h \
- /nix/store/qnwxpk0in4bm43q2qnykvkjxa9qhqd0z-gcc-14.3.0/lib/gcc/x86_64-unknown-linux-gnu/14.3.0/include/stdbool.h \
  /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/stdio.h \
  /nix/store/74qjr01q87nwfl0dbsr1s45p8crw3q1f-glibc-2.40-66-dev/include/bits/libc-header-start.h \
  /nix/store/qnwxpk0in4bm43q2qnykvkjxa9qhqd0z-gcc-14.3.0/lib/gcc/x86_64-unknown-linux-gnu/14.3.0/include/stdarg.h \

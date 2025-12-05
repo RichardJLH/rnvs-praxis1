@@ -149,6 +149,45 @@ webserver/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/webserver.dir/build.make CMakeFiles/webserver.dir/build
 .PHONY : webserver/fast
 
+#=============================================================================
+# Target rules for targets named network
+
+# Build rule for target.
+network: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 network
+.PHONY : network
+
+# fast build rule for target.
+network/fast:
+	$(MAKE) $(MAKESILENT) -f network/CMakeFiles/network.dir/build.make network/CMakeFiles/network.dir/build
+.PHONY : network/fast
+
+#=============================================================================
+# Target rules for targets named http
+
+# Build rule for target.
+http: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 http
+.PHONY : http
+
+# fast build rule for target.
+http/fast:
+	$(MAKE) $(MAKESILENT) -f http/CMakeFiles/http.dir/build.make http/CMakeFiles/http.dir/build
+.PHONY : http/fast
+
+#=============================================================================
+# Target rules for targets named util
+
+# Build rule for target.
+util: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 util
+.PHONY : util
+
+# fast build rule for target.
+util/fast:
+	$(MAKE) $(MAKESILENT) -f util/CMakeFiles/util.dir/build.make util/CMakeFiles/util.dir/build
+.PHONY : util/fast
+
 webserver.o: webserver.c.o
 .PHONY : webserver.o
 
@@ -183,6 +222,9 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
+	@echo "... http"
+	@echo "... network"
+	@echo "... util"
 	@echo "... webserver"
 	@echo "... webserver.o"
 	@echo "... webserver.i"

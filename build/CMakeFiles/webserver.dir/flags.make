@@ -4,7 +4,7 @@
 # compile C with /nix/store/67x7pknz0qa2j16x02idf0x98lpcspah-gcc-wrapper-14.3.0/bin/gcc
 C_DEFINES = 
 
-C_INCLUDES = 
+C_INCLUDES = -I/home/richard/Documents/Uni/RN/rnvs-praxis1
 
 C_FLAGS = -g -std=gnu11 -Wall -Wextra -Wpedantic
 

@@ -8,6 +8,9 @@ webserver: \
   /nix/store/lmn7lwydprqibdkghw7wgcn21yhllz13-glibc-2.40-66/lib/libm.so \
   /nix/store/lmn7lwydprqibdkghw7wgcn21yhllz13-glibc-2.40-66/lib/libm.so.6 \
   /nix/store/lmn7lwydprqibdkghw7wgcn21yhllz13-glibc-2.40-66/lib/libmvec.so.1 \
+  network/libnetwork.a \
+  http/libhttp.a \
+  util/libutil.a \
   /nix/store/qnwxpk0in4bm43q2qnykvkjxa9qhqd0z-gcc-14.3.0/lib/gcc/x86_64-unknown-linux-gnu/14.3.0/libgcc.a \
   /nix/store/fkw48vh7ivlvlmhp4j30hy2gvg00jgin-gcc-14.3.0-lib/lib/libgcc_s.so \
   /nix/store/fkw48vh7ivlvlmhp4j30hy2gvg00jgin-gcc-14.3.0-lib/lib/libgcc_s.so \
@@ -47,6 +50,12 @@ CMakeFiles/webserver.dir/webserver.c.o:
 /nix/store/lmn7lwydprqibdkghw7wgcn21yhllz13-glibc-2.40-66/lib/libm.so.6:
 
 /nix/store/lmn7lwydprqibdkghw7wgcn21yhllz13-glibc-2.40-66/lib/libmvec.so.1:
+
+network/libnetwork.a:
+
+http/libhttp.a:
+
+util/libutil.a:
 
 /nix/store/qnwxpk0in4bm43q2qnykvkjxa9qhqd0z-gcc-14.3.0/lib/gcc/x86_64-unknown-linux-gnu/14.3.0/libgcc.a:
 

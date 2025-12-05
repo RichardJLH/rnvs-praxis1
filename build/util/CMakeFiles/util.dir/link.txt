@@ -1,0 +1,2 @@
+/nix/store/67x7pknz0qa2j16x02idf0x98lpcspah-gcc-wrapper-14.3.0/bin/ar qc libutil.a CMakeFiles/util.dir/string_view.c.o CMakeFiles/util.dir/failure.c.o
+/nix/store/67x7pknz0qa2j16x02idf0x98lpcspah-gcc-wrapper-14.3.0/bin/ranlib libutil.a

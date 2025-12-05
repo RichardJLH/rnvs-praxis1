@@ -11,6 +11,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.31.7/CMakeCCompiler.cmake"
   "CMakeFiles/3.31.7/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.31.7/CMakeSystem.cmake"
+  "/home/richard/Documents/Uni/RN/rnvs-praxis1/http/CMakeLists.txt"
+  "/home/richard/Documents/Uni/RN/rnvs-praxis1/network/CMakeLists.txt"
+  "/home/richard/Documents/Uni/RN/rnvs-praxis1/util/CMakeLists.txt"
   "/nix/store/a3w3ka2d796ghlhf31il839c0658m5ih-cmake-3.31.7/share/cmake-3.31/Modules/CMakeCInformation.cmake"
   "/nix/store/a3w3ka2d796ghlhf31il839c0658m5ih-cmake-3.31.7/share/cmake-3.31/Modules/CMakeCXXInformation.cmake"
   "/nix/store/a3w3ka2d796ghlhf31il839c0658m5ih-cmake-3.31.7/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake"
@@ -55,9 +58,15 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CPackConfig.cmake"
   "CPackSourceConfig.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "network/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "http/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "util/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/webserver.dir/DependInfo.cmake"
+  "network/CMakeFiles/network.dir/DependInfo.cmake"
+  "http/CMakeFiles/http.dir/DependInfo.cmake"
+  "util/CMakeFiles/util.dir/DependInfo.cmake"
   )

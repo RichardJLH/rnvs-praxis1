@@ -42,6 +42,14 @@ if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/nix/store/67x7pknz0qa2j16x02idf0x98lpcspah-gcc-wrapper-14.3.0/bin/objdump")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for each subdirectory.
+  include("/home/richard/Documents/Uni/RN/rnvs-praxis1/build/network/cmake_install.cmake")
+  include("/home/richard/Documents/Uni/RN/rnvs-praxis1/build/http/cmake_install.cmake")
+  include("/home/richard/Documents/Uni/RN/rnvs-praxis1/build/util/cmake_install.cmake")
+
+endif()
+
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
